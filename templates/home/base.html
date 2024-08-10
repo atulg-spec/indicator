@@ -129,10 +129,11 @@
           class="text-sm {% if request.get_full_path == '/contact' %}text-white font-bold{% else %}text-gray-400{% endif %} hover:text-white"
           href="/contact">Contact Us</a></li>
     </ul>
-    <span
-      class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 text-sm text-gray-50 font-bold  rounded-xl transition duration-200">Hii👋🏻,
-      {{request.user.first_name}}</span>
     {% if request.user.is_authenticated %}
+    <span
+    class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 text-sm text-gray-50 font-bold  rounded-xl transition duration-200">Hii👋🏻,
+    {{request.user.first_name}}</span>
+
     {% else %}
     <a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold  rounded-xl transition duration-200"
       href="/social-auth/login/google-oauth2/">Sign In</a>
@@ -182,7 +183,6 @@
             class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-gray-900 hover:bg-gray-800  rounded-xl">Hello👋🏻,
             {{request.user.first_name}}
           </span>
-
           {% else %}
           <a class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold leading-none bg-gray-50 hover:bg-gray-100 rounded-xl"
             href="/social-auth/login/google-oauth2/">Sign in</a>
