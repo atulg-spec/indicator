@@ -12,7 +12,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-_gop-62^rjslpmmn+i2m$i&v6^7i9!02$!78abxk7s8pvon%7%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -111,6 +111,17 @@ USE_I18N = True
 
 USE_TZ = True
 
+LOGIN_REDIRECT_URL = "/social-auth/login/google-oauth2/"
+LOGOUT_REDIRECT_URL = "/"
+LOGIN_URL = '/social-auth/login/google-oauth2/'
+SOCIAL_AUTH_LOGIN_ERROR_URL = '/'
+SOCIAL_AUTH_RAISE_EXCEPTIONS = False
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://trade.startmarket.in',
+    'http://127.0.0.1:8000',
+]
+
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '715982619092-bvatv5mfq7dros3h67dstgt0r5o25mpi.apps.googleusercontent.com'
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'
 
@@ -118,12 +129,12 @@ SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
-# STATIC_ROOT = 'static'
+STATIC_ROOT = 'static'
 MEDIA_URL="/media/"
 
-STATICFILES_DIRS =[
-    os.path.join(BASE_DIR, "static"),
-]
+# STATICFILES_DIRS =[
+#     os.path.join(BASE_DIR, "static"),
+# ]
 
 MESSAGE_TAGS = {
     messages.ERROR: 'danger'
