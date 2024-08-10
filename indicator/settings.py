@@ -111,7 +111,7 @@ USE_I18N = True
 
 USE_TZ = True
 
-LOGIN_REDIRECT_URL = "/social-auth/login/google-oauth2/"
+LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/"
 LOGIN_URL = '/social-auth/login/google-oauth2/'
 SOCIAL_AUTH_LOGIN_ERROR_URL = '/'
