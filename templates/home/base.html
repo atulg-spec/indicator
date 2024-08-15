@@ -5,11 +5,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
+  <link rel="shortcut icon" href="/static/images/icon-circle.png" type="image/png">
+  <link rel="icon" href="/static/images/icon-circle.png" sizes="32x32" type="image/png">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-
   <link href="/static/css/style.css" rel="stylesheet">
   {% block extra_head %}
+  <meta name="title" content="Start Market Algo Bot | Best Trading Indicator for Forex, Crypto & Stock Market">
+  <meta name="description"
+    content="Start Market Algo Bot - The ultimate trading indicator for Forex, Crypto, and Stock Market. Enhance your trading strategy with automated stop loss, interactive charts, and color-coded signals. Maximize your profits with Start Market Algo Bot today!">
+  <meta name="keywords"
+    content="Start Market Algo Bot, Trading indicator, Forex trading, Crypto trading, Stock market, Automated trading, Technical analysis, Stop loss, Interactive charts, Color-coded signals, Maximize trading profits, Trading strategy, Automated stop loss, Smart trading">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Start Market">
+  <title>Start Market Algo Bot | Best Trading Indicator for Forex, Crypto & Stock Market</title>
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Start Market Algo Bot",
+      "image": "https://trade.startmarket.in/static/images/product.png",
+      "description": "Start Market Algo Bot - The ultimate trading indicator for Forex, Crypto, and Stock Market. Enhance your trading strategy with automated stop loss, interactive charts, and color-coded signals.",
+      "brand": "Start Market",
+      "sku": "START-MARKET-ALGO-BOT",
+      "offers": {
+          "@type": "Offer",
+          "url": "https://trade.startmarket.in/indicators",
+          "priceCurrency": "INR",
+          "price": "12399",
+          "availability": "https://schema.org/InStock"
+      }
+  }
+  </script>
   {% endblock extra_head %}
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -131,8 +159,8 @@
     </ul>
     {% if request.user.is_authenticated %}
     <span
-    class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 text-sm text-gray-50 font-bold  rounded-xl transition duration-200">Hii👋🏻,
-    {{request.user.first_name}}</span>
+      class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 text-sm text-gray-50 font-bold  rounded-xl transition duration-200">Hii👋🏻,
+      {{request.user.first_name}}</span>
 
     {% else %}
     <a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold  rounded-xl transition duration-200"
