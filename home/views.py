@@ -2,7 +2,17 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from .forms import ContactForm
 from django.contrib.auth.decorators import login_required
+from django.views.decorators.http import require_GET
+from django.http import HttpResponse
 
+@require_GET
+def robots_txt(request):
+    lines = [
+        "User-agent: *",
+        "Disallow: /admin/",
+        # Add more rules here
+    ]
+    return HttpResponse("\n".join(lines), content_type="text/plain")
 
 # Create your views here.
 def index(request):
